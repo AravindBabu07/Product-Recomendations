@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DC -Product Recommendation</fullName>
+    <types>
+        <members>ProductCatalogCtrlRG</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Product_Catalog_Image_Setup</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>DE_PR</members>
+        <members>ProductCatalogAddToCartEvent</members>
+        <members>ProductCatalogItemRG</members>
+        <members>ProductCatalogShowSaveCart</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>RG_Cart_Item__c.Product__c</members>
+        <members>RG_Cart_Item__c.Quantity__c</members>
+        <members>RG_Cart_Item__c.RG_Cart__c</members>
+        <members>RG_Cart_Item__c.Total_Price__c</members>
+        <members>RG_Cart_Item__c.Unit_Price__c</members>
+        <members>RG_Cart__c.Active__c</members>
+        <members>RG_Cart__c.CartItem_Count__c</members>
+        <members>RG_Cart__c.Cart_Subtotal__c</members>
+        <members>RG_Cart__c.Cart_Total_Amount__c</members>
+        <members>RG_Cart__c.Contact__c</members>
+        <members>RG_Cart__c.Credit_Card__c</members>
+        <members>RG_Cart__c.Expiration__c</members>
+        <members>RG_Cart__c.Installation__c</members>
+        <members>RG_Cart__c.Lead__c</members>
+        <members>RG_Cart__c.Security_Code__c</members>
+        <members>RG_Cart__c.Shipping__c</members>
+        <members>RG_Cart__c.Tax__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>RG_Cart_Item__c</members>
+        <members>RG_Cart__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>RG_Cart_Item__c-Cart Item Layout</members>
+        <members>RG_Cart__c-Cart Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>RG_Cart__c.All</members>
+        <members>RG_Cart__c.Created_Today</members>
+        <members>RG_Cart__c.My_Orders</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>RG_Cart__c.Transfer_Product_Images</members>
+        <name>WebLink</name>
+    </types>
+    <version>50.0</version>
+</Package>

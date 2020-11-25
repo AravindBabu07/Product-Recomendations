@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Show save Cart Button">
+    <aura:attribute name="showSaveCart" type="Boolean" />
+</aura:event>

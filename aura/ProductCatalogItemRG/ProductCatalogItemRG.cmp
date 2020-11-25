@@ -1,0 +1,45 @@
+<aura:component >
+    <aura:attribute name="sitePrefix" type="String"/>
+    <aura:attribute name="index" type="Integer"/>
+    <aura:attribute name="product" type="PricebookEntry"/>
+    <aura:attribute name="cart" type="Map[]"/>
+    <aura:attribute name="thePage" type="Integer" default="0"/>
+    <aura:attribute name="currentQty" type="Integer"/>
+    <aura:handler name="change" value="{!v.cart}" action="{!c.doInit}"/>
+    <aura:registerEvent name="AddToCartEvent" type="c:ProductCatalogAddToCartEvent" />
+    <aura:registerEvent name="ShowCartEvent" type="c:ProductCatalogShowSaveCart" />
+    <aura:attribute name="nextDisabled" type="Boolean" default="true" />
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+
+    
+    <div class="slds-grid slds-wrap products">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12 slds-large-size_2-of-12">
+                            <div class="product_image">
+                               <img src="{!$SfdcSite.pathPrefix + '/servlet/servlet.FileDownload?file=' + v.product.Product2.Image__c}"/>
+                            </div>   
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-large-size_6-of-12">
+                            <div class="product_details">
+                                <div class="slds-text-heading_medium product_name">{!v.product.Product2.Name}</div>
+                                <div class="slds-text-heading_medium"> <ui:outputCurrency value="{!v.product.UnitPrice}"/></div>
+                            </div>  
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_3-of-12 slds-large-size_2-of-12" style="text-align:center;">
+                            <div class="quantity">
+                                
+                                <div> <lightning:input aura:id="prodQuantity" name="prodQuantity" label="Qty" minlength="1" maxlength="4"
+                              value="{!v.currentQty}" placeholder="0" onfocus="{!c.clearQty}" /></div>
+                            </div>   
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_3-of-12 slds-large-size_2-of-12" style="text-align:center;">
+                            <div class="add_button">
+                                  <lightning:button class="slds-form-element" variant="brand" label="Add" onclick="{! c.addToCart2 }" value="{!v.product.Product2.Id}"/>
+                            </div>    
+                        </div>
+                    </div>
+   
+    
+    
+</aura:component>
